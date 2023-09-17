@@ -20,8 +20,6 @@
     - [Loops](syntax/control-flow/loops.md)
     - [Code Block](syntax/control-flow/code-block.md)
     - [Branching](syntax/control-flow/branching.md)
-    - [Ternary](syntax/control-flow/ternary.md)
-    - [Pattern Matching](syntax/control-flow/pattern-matching.md)
   - [Functions](syntax/functions.md)
   - [Operators](syntax/operators.md)
   - [Compile Time](syntax/comptime.md)
