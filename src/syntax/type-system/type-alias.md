@@ -17,7 +17,7 @@ The `<type_alias_declaration>` declares a new type alias.
 ### Definition
 
 ```ebnf
-<type_alias_definition> ::= <type_alias_declaration> "is" <ident> ;
+<type_alias_definition> ::= <type_alias_declaration> "=" <ident> ;
 ```
 
 The `<type_alias_definition>` defines the new type alias to another type. The first identifier is
