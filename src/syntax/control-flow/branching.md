@@ -71,6 +71,10 @@ Semantics of the match statement are defined in the
 <ternary> ::= <expr> "?" <expr> ":" <expr> ;
 ```
 
+Dependencies:
+
+- [`<expr>`](../expressions.md)
+
 The `<ternary>` is a branching statement that takes an expression, followed by a question mark, or
 ternary operator, followed by two colon separated expressions.
 
