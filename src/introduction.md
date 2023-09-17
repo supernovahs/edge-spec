@@ -31,8 +31,8 @@ whitespace characters `\n`, `\t`, and `\r` may surround all tokens unless wrappe
 Generally, we use long-formed names for clarity of each token, however, common tokens are
 abbreviated and defined as follows:
 
-- [ ] [`<ident>`](syntax/identifiers.md): "identifier"
-- [ ] [`<expr>`](syntax/expressions.md): "expression"
+- [`<ident>`](syntax/identifiers.md): "identifier"
+- [`<expr>`](syntax/expressions.md): "expression"
 
 ### Disambiguation
 
