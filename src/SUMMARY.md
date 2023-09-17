@@ -35,3 +35,4 @@
   - [Visibility](semantics/visibility.md)
   - [Trait Solving](semantics/trait-solving.md)
   - [Data Locations](semantics/data-locations.md)
+  - [Control Flow](semantics/control-flow.md)

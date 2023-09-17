@@ -85,3 +85,4 @@ returns a value from a slice of memory to the caller of the current execution co
   - [ ] [Visibility](semantics/visibility.md)
   - [ ] [Trait Solving](semantics/trait-solving.md)
   - [ ] [Data Locations](semantics/data-locations.md)
+  - [ ] [Control Flow](semantics/control-flow.md)
