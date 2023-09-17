@@ -18,7 +18,7 @@ remainder of the loop.
 ### Loop Block
 
 ```ebnf
-<loop_block> ::= "{" (<expr> | <stmt> | <loop_break> | <loop_continue>)* "}" ;
+<loop_block> ::= "{" ((<expr> | <stmt> | <loop_break> | <loop_continue>) ";")* "}" ;
 ```
 
 Dependencies:

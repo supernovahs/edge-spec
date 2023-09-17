@@ -18,6 +18,7 @@
     - [Trait Constraints](syntax/type-system/traits.md)
   - [Control Flow](syntax/control-flow.md)
     - [Loops](syntax/control-flow/loops.md)
+    - [Code Block](syntax/control-flow/code-block.md)
     - [Branching](syntax/control-flow/branching.md)
     - [Ternary](syntax/control-flow/ternary.md)
     - [Pattern Matching](syntax/control-flow/pattern-matching.md)
