@@ -5,7 +5,7 @@ Generics are polymorphic types enabling function and type reuse across different
 ### Type Parameters
 
 ```ebnf
-<type_parameter_single> ::= <ident> <trait_constraint> ;
+<type_parameter_single> ::= <ident> <trait_constraints> ;
 
 <type_parameters> ::= "<" <type_parameter_single> ("," <type_parameter_single>)* [","] ">" ;
 ```
@@ -13,7 +13,7 @@ Generics are polymorphic types enabling function and type reuse across different
 Dependencies:
 
 - [`<ident>`](../identifiers.md)
-- [`<trait_constraint>`](./traits.md)
+- [`<trait_constraints>`](./traits.md)
 
 The `<type_parameter_single>` is an individual type parameter for parametric polymorphic types and
 functions. We define this as a type name optionally followed by a trait constraint.
