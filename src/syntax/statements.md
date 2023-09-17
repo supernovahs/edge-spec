@@ -1,7 +1,7 @@
 ## Statements
 
 ```ebnf
-<statement> ::=
+<stmt> ::=
     | <use_directive>
     | <variable_declaration>
     | <variable_assignment>
@@ -21,6 +21,6 @@ Dependencies:
 - [`<loop>`](./control-flow/loops.md)
 - [`<match>`](./control-flow/pattern-matching.md)
 
-The `<statement>` is similar to an expression, however the item does not return[^ret] a value.
+The `<stmt>` is similar to an expression, however the item does not return[^ret] a value.
 
 [^ret]: See [Disambiguation: Return vs Return™️](../introduction.md#return-vs-return™️)

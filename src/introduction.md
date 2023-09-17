@@ -33,6 +33,7 @@ abbreviated and defined as follows:
 
 - [`<ident>`](syntax/identifiers.md): "identifier"
 - [`<expr>`](syntax/expressions.md): "expression"
+- [`<stmt>`](syntax/statements.md): "statement"
 
 ### Disambiguation
 
