@@ -35,6 +35,17 @@ expressions.
 
 Behavior of instantiation is defined in the [data location rule](../../semantics/data-locations.md).
 
-### Access
+### Union Pattern
 
-> TODO: allow direct access or only allow through pattern matching??
+```ebnf
+<union_pattern> ::= <ident> "::" <ident> ;
+```
+
+The `<union_pattern>` is a pattern consisting of the union's name and a member's name separated by a
+double colon.
+
+### Pattern Match
+
+```ebnf
+<pattern_match> ::= <ident> "matches" <union_pattern> ;
+```
