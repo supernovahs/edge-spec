@@ -6,4 +6,5 @@ src = "src"
 title = "language specification"
 
 [output.html]
+default-theme = "ayu"
 additional-js = ["src/static/ebnf.min.js"]
