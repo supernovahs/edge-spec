@@ -10,3 +10,4 @@ parametric polymorphism, nominative subtyping, and compile time monomorphization
 - [Type Alias](./type-system/type-alias.md)
 - [Generics](./type-system/generics.md)
 - [Trait Constraints](./type-system/traits.md)
+- [Signature](./type-system/signature.md)

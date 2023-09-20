@@ -5,9 +5,12 @@ The sum type is a union of multiple types where the data type represents one of 
 ### Declaration
 
 ```ebnf
-<union_member> ::= <ident> ["(" [<ident> ("," <ident>)* [","]] ")"] ;
+<union_member> ::= <ident> ["(" [<type_signature> ("," <type_signature>)* [","]] ")"] ;
 
-<union_declaration> ::= "union" <ident> "{" <union_member> ["," <union_member>] [","] "}" ;
+<union_declaration> ::=
+    "union" <ident> [<type_parameters>] "{"
+        <union_member> ["," <union_member>] [","]
+    "}" ;
 ```
 
 Dependencies:
@@ -28,6 +31,7 @@ Dependencies:
 
 - [`<ident>`](../identifiers.md)
 - [`<expr>`](../expressions.md)
+- [`<type_signature>`](./signature.md)
 
 The `<union_instantiation>` instantiates, or creates, the sum type. This consists of the union's
 identifier, followed by the member's identifier, followed by an optional comma separated list of

@@ -3,22 +3,40 @@
 
 The product type is a compound type composed of none or more internal types.
 
-### Declaration
+### Signature
 
 ```ebnf
-<struct_field_declaration> ::= ["pub"] <ident> ":" <ident> ;
-<struct_declaration> ::=
-    ["pub"] ["packed"] "struct" <ident> <type_parameters> "{"
-    [<struct_field_declaration> ("," <struct_field_declaration>)* [","]]
-    "}" ;
-
-<tuple_declaration> ::= ["pub"] ["packed"] "(" <ident> ("," <ident>)* [","] ")" ;
+<struct_signature> ::= <ident> [<type_parameters>] ;
+<tuple_signature> ::= "(" <type_signature> ("," <type_signature>)* [","] ")" ;
 ```
 
 Dependencies:
 
 - [`<ident>`](../identifiers.md)
 - [`<type_parameters>`](./generics.md)
+- [`<type_signature>`](../signature.md)
+
+The `<struct_signature>` is a struct identifier followed by optional type parameters.
+
+The `<tuple_signature>` is a comma separated list of type signatures delimited by parenthesis.
+
+### Declaration
+
+```ebnf
+<struct_field_declaration> ::= ["pub"] <ident> ":" <type_signature> ;
+<struct_declaration> ::=
+    ["pub"] ["packed"] "struct" <struct_signature> "{"
+    [<struct_field_declaration> ("," <struct_field_declaration>)* [","]]
+    "}" ;
+
+<tuple_declaration> ::= ["pub"] ["packed"] <tuple_signature> ;
+```
+
+Dependencies:
+
+- [`<ident>`](../identifiers.md)
+- [`<type_parameters>`](./generics.md)
+- [`<type_signature>`](../signature.md)
 
 The `<struct_declaration>` is a declaration of a product type, or a data structure that contains all
 of its internally declared types. Each struct field is named with an assigned type.
@@ -35,8 +53,8 @@ visibility in the [visibility semantics documentation](../../semantics/visibilit
 <struct_field_instantiation> ::= <ident> ":" <expression> ;
 
 <struct_instantiation> ::=
-    [<data_location>] <ident> "{"
-    [<struct_field_instantiation> ("," <struct_field_instantiation>)* [","]]
+    [<data_location>] <struct_signature> "{"
+        [<struct_field_instantiation> ("," <struct_field_instantiation>)* [","]]
     "}" ;
 
 <tuple_instantiation> ::= [<data_location>] <ident> "(" [<expr> ("," <expr>)* [","]] ")" ;

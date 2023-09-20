@@ -17,8 +17,12 @@ The `<type_alias_declaration>` declares a new type alias.
 ### Definition
 
 ```ebnf
-<type_alias_definition> ::= <type_alias_declaration> "=" <ident> ;
+<type_alias_definition> ::= <type_alias_declaration> "=" <type_signature> ;
 ```
+
+Dependencies:
+
+- [`<type_signature>`](./signature.md)
 
 The `<type_alias_definition>` defines the new type alias to another type. The first identifier is
 the name of the type alias while the second identifier is the underlying type.

@@ -16,6 +16,7 @@
     - [Type Alias](syntax/type-system/type-alias.md)
     - [Generics](syntax/type-system/generics.md)
     - [Trait Constraints](syntax/type-system/traits.md)
+    - [Type Signature](syntax/type-system/signature.md)
   - [Control Flow](syntax/control-flow.md)
     - [Loops](syntax/control-flow/loops.md)
     - [Code Block](syntax/control-flow/code-block.md)

@@ -68,6 +68,7 @@ returns a value from a slice of memory to the caller of the current execution co
     - [x] [Type Alias](syntax/type-system/type-alias.md)
     - [x] [Generics](syntax/type-system/generics.md)
     - [x] [Trait Constraints](syntax/type-system/traits.md)
+    - [x] [Type Signature](syntax/type-system/signature.md)
   - [x] [Control Flow](syntax/control-flow.md)
     - [x] [Loops](syntax/control-flow/loops.md)
     - [x] [Code Block](syntax/control-flow/code-block.md)
