@@ -1,5 +1,7 @@
 ## Expressions
 
+> TODO: rewrite
+
 ```ebnf
 <binary_operation> ::= <expr> <binary_operator> <expr> ;
 <unary_operation> ::= <unary_operator> <expr> ;

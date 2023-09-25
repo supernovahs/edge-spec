@@ -6,51 +6,24 @@ The product type is a compound type composed of none or more internal types.
 ### Signature
 
 ```ebnf
-<struct_signature> ::= <ident> [<type_parameters>] ;
-<tuple_signature> ::= "(" <type_signature> ("," <type_signature>)* [","] ")" ;
-```
-
-Dependencies:
-
-- [`<ident>`](../identifiers.md)
-- [`<type_parameters>`](./generics.md)
-- [`<type_signature>`](../signature.md)
-
-The `<struct_signature>` is a struct identifier followed by optional type parameters.
-
-The `<tuple_signature>` is a comma separated list of type signatures delimited by parenthesis.
-
-### Declaration
-
-```ebnf
-<struct_field_declaration> ::= ["pub"] <ident> ":" <type_signature> ;
-<struct_declaration> ::=
-    ["pub"] ["packed"] "struct" <struct_signature> "{"
-    [<struct_field_declaration> ("," <struct_field_declaration>)* [","]]
+<struct_field_signature> ::= <ident> ":" <type_signature> ;
+<struct_signature> ::=
+    ["packed"] "{"
+        [<struct_field_signature> ("," <struct_field_signature>)* [","]]
     "}" ;
-
-<tuple_declaration> ::= ["pub"] ["packed"] <tuple_signature> ;
+<tuple_signature> ::= ["packed"] "(" <type_signature> ("," <type_signature>)* [","] ")" ;
 ```
 
 Dependencies:
 
 - [`<ident>`](../identifiers.md)
-- [`<type_parameters>`](./generics.md)
-- [`<type_signature>`](../signature.md)
-
-The `<struct_declaration>` is a declaration of a product type, or a data structure that contains all
-of its internally declared types. Each struct field is named with an assigned type.
-
-The `<tuple_declaration>` is a declaration of an anonymous product type, or a tuple that contains
-all of its internally declared types. Each tuple field is unnamed and contains only a 
-
-The optional "pub" keyword in the struct, tuple, and field declarations indicate visibility, more on
-visibility in the [visibility semantics documentation](../../semantics/visibility.md).
+- [`<type_parameters>`](./generics.md#type-parameters)
+- [`<type_signature>`](./assignment.md#signature)
 
 ### Instantiation
 
 ```ebnf
-<struct_field_instantiation> ::= <ident> ":" <expression> ;
+<struct_field_instantiation> ::= <ident> ":" <expr> ;
 
 <struct_instantiation> ::=
     [<data_location>] <struct_signature> "{"
@@ -59,6 +32,12 @@ visibility in the [visibility semantics documentation](../../semantics/visibilit
 
 <tuple_instantiation> ::= [<data_location>] <ident> "(" [<expr> ("," <expr>)* [","]] ")" ;
 ```
+
+Dependencies:
+
+- [`<ident>`](../identifiers.md)
+- [`<expr>`](../expressions.md)
+- [`<data_location>`](../data-locations.md)
 
 The `<struct_instantiation>` is an instantiation, or creation, of a struct. It may optionally
 include a data location annotation, however the semantic rules for this are in the

@@ -1,5 +1,7 @@
 ## Statements
 
+> TODO: rewrite
+
 ```ebnf
 <stmt> ::=
     | <use_directive>

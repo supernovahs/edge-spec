@@ -2,20 +2,17 @@
 
 The sum type is a union of multiple types where the data type represents one of the inner types.
 
-### Declaration
+### Signature
 
 ```ebnf
-<union_member> ::= <ident> ["(" [<type_signature> ("," <type_signature>)* [","]] ")"] ;
-
-<union_declaration> ::=
-    "union" <ident> [<type_parameters>] "{"
-        <union_member> ["," <union_member>] [","]
-    "}" ;
+<union_member_signature> ::= <ident> ["(" <type_signature> ")"] ;
+<union_signature> ::= ["|"] <union_member_signature> ("|" <union_member_signature>)* ;
 ```
 
 Dependencies:
 
 - [`<ident>`](../identifiers.md)
+- [`<type_signature>`](./assignment.md)
 
 The `<union_declaration>` is a declaration of a sum type, or data structure that contains one of its
 internally declared members. Each `<union_member>` is named by an identifier, optionally followed by
@@ -45,6 +42,10 @@ Behavior of instantiation is defined in the [data location rule](../../semantics
 <union_pattern> ::= <ident> "::" <ident> ;
 ```
 
+Dependencies:
+
+- [`<ident>`](../identifiers.md)
+
 The `<union_pattern>` is a pattern consisting of the union's name and a member's name separated by a
 double colon.
 
@@ -53,3 +54,7 @@ double colon.
 ```ebnf
 <pattern_match> ::= <ident> "matches" <union_pattern> ;
 ```
+
+Dependencies:
+
+- [`<ident>`](../identifiers.md)

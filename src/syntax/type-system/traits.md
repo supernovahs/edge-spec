@@ -1,5 +1,7 @@
 ## Traits
 
+> TODO: rewrite this after constants
+
 Traits are interface-like declarations that constrain [generic types](./generics.md) to implement
 specific methods or contain specific properties.
 
@@ -66,6 +68,10 @@ constants, and functions. Semantics of the implementation are listed under
 ```ebnf
 <trait_constraints> ::= ":" <ident> ("&" <ident>)* ;
 ```
+
+Dependencies:
+
+- [`<ident>`](../identifiers.md)
 
 The `<trait_constraints>` contains a colon followed by an ampersand separated list of identifiers of
 implemented traits. The ampersand is meant to indicate that all of the trait identifiers are
