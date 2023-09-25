@@ -73,7 +73,7 @@ returns a value from a slice of memory to the caller of the current execution co
     - [x] [Loops](syntax/control-flow/loops.md)
     - [x] [Code Block](syntax/control-flow/code-block.md)
     - [x] [Branching](syntax/control-flow/branching.md)
-  - [ ] [Operators](syntax/operators.md)
+  - [x] [Operators](syntax/operators.md)
   - [ ] [Compile Time](syntax/comptime.md)
     - [ ] [Constants](syntax/comptime/constants.md)
     - [ ] [Branches](syntax/comptime/branches.md)

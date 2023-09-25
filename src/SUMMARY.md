@@ -21,7 +21,6 @@
     - [Loops](syntax/control-flow/loops.md)
     - [Code Block](syntax/control-flow/code-block.md)
     - [Branching](syntax/control-flow/branching.md)
-  - [Functions](syntax/functions.md)
   - [Operators](syntax/operators.md)
   - [Compile Time](syntax/comptime.md)
     - [Constants](syntax/comptime/constants.md)
