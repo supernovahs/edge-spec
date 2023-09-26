@@ -1,7 +1,5 @@
 ## Traits
 
-> TODO: rewrite this after constants
-
 Traits are interface-like declarations that constrain [generic types](./generics.md) to implement
 specific methods or contain specific properties.
 

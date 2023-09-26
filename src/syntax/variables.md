@@ -26,5 +26,3 @@ Dependencies:
 
 The `<variable_assignment>` is the assignment of a variable. Its identifier is assigned the returned
 value of an expression using the assignment operator.
-
-> TODO: define assignment operator under operators???
