@@ -27,7 +27,6 @@ In contrast to ENBF, we define a rule that all items are non-atomic, that is to 
 whitespace characters `\n`, `\t`, and `\r` may surround all tokens unless wrapped with curly braces
 `{ "0x" (<hex_digit>)* }`.
 
-
 Generally, we use long-formed names for clarity of each token, however, common tokens are
 abbreviated and defined as follows:
 
@@ -75,9 +74,10 @@ returns a value from a slice of memory to the caller of the current execution co
     - [x] [Branching](syntax/control-flow/branching.md)
   - [x] [Operators](syntax/operators.md)
   - [ ] [Compile Time](syntax/comptime.md)
-    - [ ] [Constants](syntax/comptime/constants.md)
-    - [ ] [Branches](syntax/comptime/branches.md)
-    - [ ] [Functions](syntax/comptime/functions.md)
+    - [x] [Literals](syntax/comptime/literals.md)
+    - [x] [Constants](syntax/comptime/constants.md)
+    - [x] [Branching](syntax/comptime/branching.md)
+    - [x] [Functions](syntax/comptime/functions.md)
     - [ ] [Macros](syntax/comptime/macros.md)
   - [ ] [Modules](syntax/modules.md)
 - [ ] [Semantics](semantics.md)
