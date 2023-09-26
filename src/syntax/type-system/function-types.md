@@ -14,14 +14,19 @@ separated by an arrow.
 > Note: `<type_signature>` also contains a tuple signature, therefore a function with multiple
 > inputs and outputs is implicitly operating on a tuple.
 
+### Declaration
+
+```ebnf
+<function_declaration> ::= 
+    "fn" <ident> "("
+        [(<ident> ":" <type_signature>) ("," <ident> ":" <type_signature>)* [","]]
+    ")" ["->" "(" <type_signature> ("," <type_signature>)* [","] ")"] ;
+```
+
 ### Assignment
 
 ```ebnf
-<function_assignment> ::=
-    "fn" <ident> "("
-        [(<ident> ":" <type_signature>) ("," <ident> ":" <type_signature>)* [","]]
-    ")" ["->" "(" <type_signature> ("," <type_signature>)* [","] ")"]
-    <code_block> ;
+<function_assignment> ::= <function_declaration> <code_block> ;
 ```
 
 The core `<function_assignment>` is defined as the "fn" keyword followed by its identifier, followed
