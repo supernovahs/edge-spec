@@ -29,6 +29,7 @@
     - [Functions](syntax/comptime/functions.md)
     - [Macros](syntax/comptime/macros.md)
   - [Modules](syntax/modules.md)
+- [Syntax Showcase](syntax-showcase.md)
 - [Semantics](semantics.md)
   - [Namespaces](semantics/namespaces.md)
   - [Scoping](semantics/scoping.md)

@@ -52,7 +52,7 @@ returns a value from a slice of memory to the caller of the current execution co
 
 ### Tasks
 
-- [ ] [Syntax](syntax.md)
+- [x] [Syntax](syntax.md)
   - [x] [Comments](syntax/comments.md)
   - [x] [Identifiers](syntax/identifiers.md)
   - [x] [Data Locations](syntax/data-locations.md)
@@ -73,13 +73,13 @@ returns a value from a slice of memory to the caller of the current execution co
     - [x] [Code Block](syntax/control-flow/code-block.md)
     - [x] [Branching](syntax/control-flow/branching.md)
   - [x] [Operators](syntax/operators.md)
-  - [ ] [Compile Time](syntax/comptime.md)
+  - [x] [Compile Time](syntax/comptime.md)
     - [x] [Literals](syntax/comptime/literals.md)
     - [x] [Constants](syntax/comptime/constants.md)
     - [x] [Branching](syntax/comptime/branching.md)
     - [x] [Functions](syntax/comptime/functions.md)
-    - [ ] [Macros](syntax/comptime/macros.md)
-  - [ ] [Modules](syntax/modules.md)
+    - [x] [Macros](syntax/comptime/macros.md)
+  - [x] [Modules](syntax/modules.md)
 - [ ] [Semantics](semantics.md)
   - [ ] [Namespaces](semantics/namespaces.md)
   - [ ] [Scoping](semantics/scoping.md)
