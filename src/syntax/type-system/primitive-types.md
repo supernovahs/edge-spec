@@ -9,18 +9,17 @@
     | "13" | "14" | "15" | "16" | "17" | "18" | "19" | "20" | "21" | "22" | "23" | "24" | "25"
     | "26" | "27" | "28" | "29" | "30" | "31" | "32" ;
 
-<signed_integer> ::= "i" <integer_size> ;
-<unsigned_integer> ::= "u" <integer_size> ;
-<fixed_bytes> ::= "b" <fixed_bytes_size> ;
+<signed_integer> ::= {"i" <integer_size>} ;
+<unsigned_integer> ::= {"u" <integer_size>} ;
+<fixed_bytes> ::= {"b" <fixed_bytes_size>} ;
 <address> ::= "addr" ;
 <boolean> ::= "bool" ;
 <pointer> ::= <data_location> "ptr" ;
 
+<numeric_type> ::= <signed_integer> | <unsigned_integer> | <fixed_bytes> | <address> ;
+
 <primitive_data_type> ::=
-    | <signed_integer>
-    | <unsigned_integer>
-    | <fixed_bytes>
-    | <address>
+    | <numeric_type>
     | <boolean>
     | <pointer> ;
 ```
