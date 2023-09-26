@@ -17,6 +17,7 @@
     - [Trait Constraints](syntax/type-system/traits.md)
     - [Implementation](syntax/type-system/implementation.md)
     - [Function Types](syntax/type-system/function-types.md)
+    - [Application Binary Interface](syntax/type-system/abi.md)
   - [Control Flow](syntax/control-flow.md)
     - [Loops](syntax/control-flow/loops.md)
     - [Code Block](syntax/control-flow/code-block.md)
