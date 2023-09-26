@@ -4,7 +4,7 @@ The type system builds on core primitive types inherent to the EVM with abstract
 parametric polymorphism, nominative subtyping, and compile time monomorphization.
 
 - [Primitive Types](./type-system/primitive-types.md)
-- [Type Assignment](./type-system/type-assignment.md)
+- [Type Assignment](./type-system/assignment.md)
 - [Product Types](./type-system/product-types.md)
 - [Sum Types](./type-system/sum-types.md)
 - [Generics](./type-system/generics.md)
