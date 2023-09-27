@@ -61,6 +61,14 @@ impl PrimitiveStruct: Add = {
     }
 }
 
+mod module {
+    mod nestedModule {
+        type A = u256;
+    }
+    pub use nestedModule::A;
+}
+use module::A;
+
 abi ERC165 = {
     fn supportsInterface(interfaceId: b4) -> bool;
 }
