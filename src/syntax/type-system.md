@@ -11,4 +11,6 @@ parametric polymorphism, nominative subtyping, and compile time monomorphization
 - [Trait Constraints](./type-system/traits.md)
 - [Implementation](./type-system/implementation.md)
 - [Function Types](./type-system/function-types.md)
+- [Event Types](./type-system/event-types.md)
 - [Application Binary Interface](./type-system/abi.md)
+- [Contract Objects](./type-system/contract-objects.md)
