@@ -41,17 +41,17 @@ type PrimitiveMultiArgFn = (u8, u8) -> (u8, u8);
 
 type GenericFn<T> = T -> T;
 
-trait Add = {
+trait Add {
     fn add(lhs: Self, rhs: Self) -> Self;
 }
 
-impl PrimitiveStruct = {
+impl PrimitiveStruct {
     fn default() -> Self {
         return Self { 0, 0, 0 };
     }
 }
 
-impl PrimitiveStruct: Add = {
+impl PrimitiveStruct: Add {
     fn add(lhs: Self, rhs: Self) -> Self {
         return Self {
             a: lhs.a + rhs.a,
@@ -69,13 +69,13 @@ mod module {
 }
 use module::A;
 
-abi ERC165 = {
+abi ERC165 {
     fn supportsInterface(interfaceId: b4) -> bool;
 }
 
 contract MyContract;
 
-impl MyContract: ERC165 = {
+impl MyContract: ERC165 {
     fn supportsInterface(interfaceId: b4) -> bool {
         return true;
     }
@@ -96,7 +96,7 @@ fn main<Cd: ERC165>(calldata: Cd) {
 Full sugared ERC20 example:
 
 ```rs
-abi ERC20 = {
+abi ERC20 {
     fn balanceOf(owner: addr) -> u256;
     fn allowance(owner: addr, spender: addr) -> u256;
     fn totalSupply() -> u256;
@@ -105,13 +105,13 @@ abi ERC20 = {
     fn approve(spender: addr, amount: u256) -> bool;
 }
 
-contract MyContract = {
+contract MyContract {
     balances: HashMap<addr, u256>,
     allowances: HashMap<addr, HashMap<addr, u256>>,
     supply: u256,
 }
 
-impl MyContract: ERC20 = {
+impl MyContract: ERC20 {
     type Transfer = event {
         sender: indexed<addr>,
         receiver: indexed<addr>,
@@ -178,7 +178,7 @@ type Approval = event {
     amount: u256,
 }
 
-abi ERC20 = {
+abi ERC20 {
     fn balanceOf(owner: addr) -> u256;
     fn allowance(owner: addr, spender: addr) -> u256;
     fn totalSupply() -> u256;

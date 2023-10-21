@@ -6,7 +6,7 @@
 
 ```ebnf
 <abi_declaration> ::=
-    "abi" <ident> "=" "{"
+    "abi" <ident> "{"
         
     "}" ;
 ```

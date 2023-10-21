@@ -6,7 +6,7 @@ Implementation blocks enable method-call syntax.
 
 ```ebnf
 <impl_block> ::=
-    "impl" <ident> [<type_parameters>] [":" <ident> [<type_parameters>]] "=" "{"
+    "impl" <ident> [<type_parameters>] [":" <ident> [<type_parameters>]] "{"
         (
             | <function_assignment>
             | <constant_assignment>

@@ -7,7 +7,7 @@ specific methods or contain specific properties.
 
 ```ebnf
 <trait_declaration> ::=
-    ["pub"] "trait" <ident> [<type_parameters>] [<trait_constraints>] "=" "{"
+    ["pub"] "trait" <ident> [<type_parameters>] [<trait_constraints>] "{"
     (
         | <type_declaration>
         | <type_assignment>
