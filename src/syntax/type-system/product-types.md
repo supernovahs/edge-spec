@@ -67,5 +67,90 @@ separated by a period.
 The `<tuple_field_access>` is written as the tuple's identifier followed by the field's index
 separated by a period.
 
-Behavior of each is specified under
-[data location semantic rules](../../semantics/data-locations.md#product-types).
+### Semantics
+
+The struct field signature maps a type identifier to a type signature. The field may be accessed by
+the struct's identifier and field identifier separated by a dot.
+
+Prefixing the signature with the "packed" keyword will pack the fields by their bitsize, otherwise
+each field is padded to its own 256 bit word.
+
+```rs
+type Rgb = packed { r: u8, g: u8, b: u8 };
+
+let rgb = Rgb { r: 1, g: 2, b: 3 };
+// rbg = 0x010203
+```
+
+Instantiation depends on the data location. Structs that can fit into a single word, either a single
+field struct or a packed struct with a bitsize sum less than or equal to 256, sit on the stack by
+default. Instantiating a struct in memory requires the memory data location annotation. If a struct
+that does not fit into a single word does not have a data location annotation, a compiler error is
+thrown.
+
+Stack struct instantiation consists of optionally bitpacking fields and leaving the struct on the
+stack. Memory instantiation consists of allocating new memory, optionally bitpacking fields, storing
+the struct in memory, and leaving the pointer to it on the stack.
+
+```rs
+type MemoryRgb = { r: u8, g: u8, b: u8 };
+
+let memoryRgb = MemoryRgb{ r: 1, g: 2, b: 3 };
+// ptr = ..
+// mstore(ptr, 1)
+// mstore(add(32, ptr), 2)
+// mstore(add(64, ptr), 3)
+```
+
+Persistent and transient storage structs must be instantiated at the file level. If anything except
+zero values are assigned, storage writes will be injected into the initcode to be run on deployment.
+A reasonable convention for creating a storage layout without the contract object abstraction would
+be to create a `Storage` type which is a struct, mapping identifiers to storage slots. Nested
+structs will also allow granular control over which variables get packed.
+
+```rs
+type Storage = {
+    a: u8,
+    b: u8,
+    c: packed {
+        a: u8,
+        b: u8
+    }
+}
+
+const storage = @default<Storage>();
+
+fn main() {
+    storage.a = 1;      // sstore(0, 1)
+    storage.b = 2;      // sstore(1, 2)
+    storage.c.a = 3;    // ca = shl(8, 3)
+    storage.c.b = 4;    // sstore(2, or(ca, 4))
+}
+```
+
+Packing rules for buffer locations is to pack everything exactly by its bit length. Packing rules
+for map locations is to right-align the first field, for each subsequent field, if its bitsize fits
+into the same word as the previous, it is left-shifted to the first available bits, otherwise, if
+the bitsize would overflow, it becomes a new word.
+
+```rs
+type Storage = {
+    a: u128,
+    b: u8,
+    c: addr,
+    d: u256
+}
+
+const storage = Storage {
+    a: 1,
+    b: 2,
+    c: 0x3,
+    d: 4,
+};
+```
+
+| Slot | Value                                                              |
+| ---- | ------------------------------------------------------------------ |
+| 0x00 | 0x0000000000000000000000000000000200000000000000000000000000000001 |
+| 0x01 | 0x0000000000000000000000000000000000000000000000000000000000000003 |
+| 0x02 | 0x0000000000000000000000000000000000000000000000000000000000000004 |
