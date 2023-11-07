@@ -49,5 +49,12 @@ The `<trait_constraints>` contains a colon followed by an ampersand separated li
 implemented traits. The ampersand is meant to indicate that all of the trait identifiers are
 implemented for the type.
 
-Semantics of trait constraints are listed under
-[trait solving rules](../../semantics/trait-solving.md).
+### Semantics
+
+Traits can be defined with associated types, constants, and functions. The trait declaration itself
+allows for optional assignment for each item as a default. Any declarations in the trait that are
+not assigned in the trait declaration must be assigned in the [implementation](implementation.md) of
+the trait for the data type. Additionally, any assignments in the trait declaration can be
+overridden in the trait implementation.
+
+> todo trait solving
