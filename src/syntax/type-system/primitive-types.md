@@ -1,4 +1,4 @@
-# Primitive Types
+## Primitive Types
 
 ```ebnf
 <integer_size> ::= "8" | "16" | "24" | "32" | "40" | "48" | "56" | "64" | "72" | "80" | "88" | "96"
@@ -14,6 +14,7 @@
 <fixed_bytes> ::= {"b" <fixed_bytes_size>} ;
 <address> ::= "addr" ;
 <boolean> ::= "bool" ;
+<bit> ::= "bit" ;
 <pointer> ::= <data_location> "ptr" ;
 
 <numeric_type> ::= <signed_integer> | <unsigned_integer> | <fixed_bytes> | <address> ;
@@ -31,3 +32,11 @@ Dependencies:
 The `<primitive_data_type>` contains signed and unsigned integers, boolean, address, and fixed bytes
 types. Additionally, we introduce a pointer type that must be prefixed with a data location
 annotation.
+
+### Semantics
+
+Integers occupy the number of bits indicated by their size. Fixed bytes types occupy the number of
+bytes indicated by their size, or `size * 8` bits. Address occupies 160 bits. Booleans occupy eight
+bits. Bit occupies a single bit. Pointers occupy a number of bits equal to their data location annotation.
+
+Pointers can point to both primitive and complex data types.
