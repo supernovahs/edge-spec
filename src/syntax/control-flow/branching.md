@@ -1,5 +1,7 @@
 ## Branching
 
+> TODO: rewrite
+
 Branching refers to blocks of code that may be executed based on a defined condition.
 
 ### If Else If Branch
@@ -31,8 +33,7 @@ Semantics and behavior are listed under the
 
 Dependencies:
 
-- [`<pattern_match>`](../type-system/sum-types.md#pattern-match)
-- [`<lambda>`](../functions.md)
+- [`<pattern_match>`](../type-system/sum-types.md#pattern-match)\
 
 The `<if_match_branch>` contains a pattern match expression followed by an optionally typed
 identifier followed by a code block.
