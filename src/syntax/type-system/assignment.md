@@ -45,3 +45,30 @@ parameters.
 
 The `<type_assignment>` is a type declaration followed by a type signature separated by an
 assignment operator.
+
+### Semantics
+
+Type assignment entails creating an identifier associated with a certain data structure or existing
+type. If the assignment is to an existing data type, it contains the same fields or members, if any,
+and exposes the same associated items, if any.
+
+```rs
+type MyCustomType = packed (u8, u8, u8);
+type MyCustomAlias = MyCustomType;
+
+fn increment(MyCustomType rgb) -> MyCustomType {
+    return (rgb.0 + 1, rgb.1 + 1, rgb.2 + 1);
+}
+
+increment(MyCustomType(1, 2, 3));
+increment(MyCustomAlias(1, 2, 3));
+```
+
+A way to create a wrapper around an existing type without exposing the existing type's external
+interface, the type may be wrapped in parenthesis, creating a "tuple" of one element, which comes
+without overhead.
+
+```rs
+type MyCustomType = packed (u8, u8, u8);
+type MyNewCustomType = (MyCustomType);
+```
