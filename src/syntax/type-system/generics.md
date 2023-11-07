@@ -21,5 +21,10 @@ functions. We define this as a type name optionally followed by a trait constrai
 The `<type_parameters>` is a comma separated list of individual type parameters delimited by angle
 brackets.
 
-Semantics and behavior of generics is defined in the
-[trait solving rules](../../semantics/trait-solving.md).
+### Semantics
+
+Generics are resolved at compile time through monomorphization. Generic functions and data types are
+monomorphized into distinct unique functions and data types. Function duplication can become
+problematic due to the EVM bytecode size limit, so a series of steps will be taken to allow for
+granular control over bytecode size. Those semantics are defined in the
+[Codesize document](../../semantics/codesize.md).
