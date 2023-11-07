@@ -58,3 +58,49 @@ double colon.
 Dependencies:
 
 - [`<ident>`](../identifiers.md)
+
+### Semantics
+
+All unions have a Unions where no member has its own internal type is effectively an enumeration over integers.
+
+```rs
+type Mutex = Locked | Unlocked;
+
+// Mutex::Locked == 0
+// Mutex::Unlocked == 1
+```
+
+Unions where any members have an internal type become proper type unions. The only case in which a
+union can exist on the stack rather than another data location is if the largest of the internal
+types has a bitsize of 248 or less. If any member's internal type is greater than 248, a data
+location must be specified.
+
+```rs
+type StackUnion = A(u8) | B(u248);
+
+type MemoryUnion = A(u256) | B | C(u8);
+```
+
+A union pattern consists of its identifier and the member identifier separated by colons. This
+pattern may be used both in match statements and if statements.
+
+```rs
+type Option<T> = None | Some(T);
+
+impl Option<T> {
+    fn unwrap(self) -> T {
+        match self {
+            Option::Some(inner) => return inner,
+            Option::None => revert(),
+        };
+    }
+
+    fn unwrapOr(self, default: T) -> T {
+        let mut value = defaut;
+        if self matches Option::Some(inner) {
+            value = inner;
+        }
+        return value;
+    }
+}
+```
