@@ -11,6 +11,7 @@
   - [Type System](syntax/type-system.md)
     - [Primitive Types](syntax/type-system/primitive-types.md)
     - [Type Assignment](syntax/type-system/assignment.md)
+    - [Array Types](syntax/type-system/array-types.md)
     - [Product Types](syntax/type-system/product-types.md)
     - [Sum Types](syntax/type-system/sum-types.md)
     - [Generics](syntax/type-system/generics.md)

@@ -5,6 +5,7 @@ parametric polymorphism, nominative subtyping, and compile time monomorphization
 
 - [Primitive Types](./type-system/primitive-types.md)
 - [Type Assignment](./type-system/assignment.md)
+- [Array Types](./type-system/array-types.md)
 - [Product Types](./type-system/product-types.md)
 - [Sum Types](./type-system/sum-types.md)
 - [Generics](./type-system/generics.md)
