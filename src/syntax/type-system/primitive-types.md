@@ -33,6 +33,21 @@ The `<primitive_data_type>` contains signed and unsigned integers, boolean, addr
 types. Additionally, we introduce a pointer type that must be prefixed with a data location
 annotation.
 
+### Examples
+
+```rs
+u8
+u256
+i8
+i256
+b4
+b32
+addr
+bool
+bit
+&s ptr
+```
+
 ### Semantics
 
 Integers occupy the number of bits indicated by their size. Fixed bytes types occupy the number of
