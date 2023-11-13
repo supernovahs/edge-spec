@@ -5,11 +5,11 @@ The array type is a list of elements of a single type.
 ### Signature
 
 ```ebnf
-<array_signature> ::= "[" <type_signature> ";" <expr> "]" ;
+<array_signature> ::= ["packed"] "[" <type_signature> ";" <expr> "]" ;
 ```
 
-The `<array_signature>` consists of a type signature and expression separated by a colon, delimited
-by brackets.
+The `<array_signature>` consists of an optional "packed" keyword prefix to a type signature and
+expression separated by a colon, delimited by brackets.
 
 ### Instantiation
 
@@ -29,13 +29,26 @@ list of expressions delimited by brackets.
 The `<array_element_access>` is the array's identifier followed a bracket-delimited expression and
 optionally a second expression, colon separated.
 
+### Examples
+
+```rs
+type TwoElementIntegerArray = [u8; 2];
+type TwoElementPackedIntegerArray = packed [u8; 2];
+
+const arr: TwoElementIntegerArray = [1, 2];
+
+const elem: u8 = arr[0];
+```
+
 ### Semantics
 
 #### Instantiation
 
-Instantiation semantics depend on the data location.
-
-In map data locations, the array is 
+Instantiation of a fixed-length array stores one element per 32 byte word in either data location.
+The only difference between data locations in terms of instantiation behavior is if all elements
+of the array are populated with constant values and the array belongs in memory, a performance
+optimization may include code-copying an instance of the constant array from the bytecode into
+memory.
 
 #### Access
 

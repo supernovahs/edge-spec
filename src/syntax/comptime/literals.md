@@ -52,5 +52,3 @@ Boolean literals may be either "true" or "false".
 ```ebnf
 <literal> ::= <numeric_literal> | <string_literal> | <boolean_literal> ;
 ```
-
-> TODO: should we add array literals? what about tuples or structs?

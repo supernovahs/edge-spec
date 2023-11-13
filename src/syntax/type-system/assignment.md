@@ -4,10 +4,12 @@
 
 ```ebnf
 <type_signature> ::=
+    | <array_signature>
     | <struct_signature>
     | <tuple_signature>
     | <union_signature>
     | <function_signature>
+    | <ident>
     | (<ident> [<type_parameters>]) ;
 ```
 
@@ -56,7 +58,7 @@ and exposes the same associated items, if any.
 type MyCustomType = packed (u8, u8, u8);
 type MyCustomAlias = MyCustomType;
 
-fn increment(MyCustomType rgb) -> MyCustomType {
+fn increment(rgb: MyCustomType) -> MyCustomType {
     return (rgb.0 + 1, rgb.1 + 1, rgb.2 + 1);
 }
 
