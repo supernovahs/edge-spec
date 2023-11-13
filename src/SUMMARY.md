@@ -31,7 +31,6 @@
     - [Constants](syntax/comptime/constants.md)
     - [Branching](syntax/comptime/branching.md)
     - [Functions](syntax/comptime/functions.md)
-    - [Macros](syntax/comptime/macros.md)
   - [Modules](syntax/modules.md)
 - [Syntax Showcase](syntax-showcase.md)
 - [Semantics](semantics.md)

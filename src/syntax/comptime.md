@@ -8,4 +8,3 @@ compile time, while comptime branches provide conditional compilation.
 - [Constants](./comptime/constants.md)
 - [Branching](./comptime/branching.md)
 - [Functions](./comptime/functions.md)
-- [Macros](./comptime/macros.md)

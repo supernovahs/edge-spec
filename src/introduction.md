@@ -81,7 +81,6 @@ returns a value from a slice of memory to the caller of the current execution co
     - [x] [Constants](syntax/comptime/constants.md)
     - [x] [Branching](syntax/comptime/branching.md)
     - [x] [Functions](syntax/comptime/functions.md)
-    - [x] [Macros](syntax/comptime/macros.md)
   - [x] [Modules](syntax/modules.md)
 - [ ] [Semantics](semantics.md)
   - [ ] [Namespaces](semantics/namespaces.md)
