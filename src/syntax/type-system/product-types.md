@@ -67,6 +67,26 @@ separated by a period.
 The `<tuple_field_access>` is written as the tuple's identifier followed by the field's index
 separated by a period.
 
+### Examples
+
+```rs
+type PrimitiveStruct = {
+    a: u8,
+    b: u8,
+    c: u8,
+};
+
+const primitiveStruct: PrimitiveStruct = PrimitiveStruct { a: 1, b: 2, c: 3 };
+
+const a = primitiveStruct.a;
+
+type PackedTuple = packed (u8, u8, u8);
+
+const packedTuple: PackedTuple = (1, 2, 3);
+
+const one = packedTuple.0;
+```
+
 ### Semantics
 
 The struct field signature maps a type identifier to a type signature. The field may be accessed by
