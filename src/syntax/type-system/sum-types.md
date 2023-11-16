@@ -12,7 +12,7 @@ The sum type is a union of multiple types where the data type represents one of 
 Dependencies:
 
 - [`<ident>`](../identifiers.md)
-- [`<type_signature>`](./assignment.md)
+- [`<type_signature>`](assignment.md)
 
 The `<union_declaration>` is a declaration of a sum type, or data structure that contains one of its
 internally declared members. Each `<union_member>` is named by an identifier, optionally followed by
@@ -28,7 +28,7 @@ Dependencies:
 
 - [`<ident>`](../identifiers.md)
 - [`<expr>`](../expressions.md)
-- [`<type_signature>`](./signature.md)
+- [`<type_signature>`](signature.md)
 
 The `<union_instantiation>` instantiates, or creates, the sum type. This consists of the union's
 identifier, followed by the member's identifier, followed by an optional comma separated list of

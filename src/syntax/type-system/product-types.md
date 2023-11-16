@@ -17,8 +17,8 @@ The product type is a compound type composed of none or more internal types.
 Dependencies:
 
 - [`<ident>`](../identifiers.md)
-- [`<type_parameters>`](./generics.md#type-parameters)
-- [`<type_signature>`](./assignment.md#signature)
+- [`<type_parameters>`](generics.md#type-parameters)
+- [`<type_signature>`](assignment.md#signature)
 
 ### Instantiation
 

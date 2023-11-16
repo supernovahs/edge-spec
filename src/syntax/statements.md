@@ -15,13 +15,13 @@
 
 Dependencies:
 
-- [`<use_directive>`](./modules.md)
-- [`<variable_declaration>`](./variables.md#declaration)
-- [`<variable_assignment>`](./variables.md#assignment)
-- [`<constant_definition>`](./comptime/constants.md)
-- [`<branch>`](./control-flow/branching.md)
-- [`<loop>`](./control-flow/loops.md)
-- [`<match>`](./control-flow/pattern-matching.md)
+- [`<use_directive>`](modules.md)
+- [`<variable_declaration>`](variables.md#declaration)
+- [`<variable_assignment>`](variables.md#assignment)
+- [`<constant_definition>`](comptime/constants.md)
+- [`<branch>`](control-flow/branching.md)
+- [`<loop>`](control-flow/loops.md)
+- [`<match>`](control-flow/pattern-matching.md)
 
 The `<stmt>` is similar to an expression, however the item does not return[^ret] a value.
 

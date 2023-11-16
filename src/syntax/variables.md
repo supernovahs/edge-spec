@@ -8,7 +8,7 @@
 
 Dependencies:
 
-- [`<ident>`](./identifiers.md)
+- [`<ident>`](identifiers.md)
 
 The `<variable_declaration>` marks the declaration of a variable, it may optionally be assigned at
 the time of declaration.
@@ -21,8 +21,8 @@ the time of declaration.
 
 Dependencies:
 
-- [`<ident>`](./identifiers.md)
-- [`<expression>`](./expressions.md)
+- [`<ident>`](identifiers.md)
+- [`<expression>`](expressions.md)
 
 The `<variable_assignment>` is the assignment of a variable. Its identifier is assigned the returned
 value of an expression using the assignment operator.

@@ -18,12 +18,12 @@
 
 Dependencies:
 
-- [`<binary_operator>`](./operators.md#binary)
-- [`<unary_operator>`](./operators.md#unary)
-- [`<ternary>`](./control-flow/ternary.md)
-- [`<fn_call>`](./functions.md)
-- [`<match>`](./control-flow/pattern-matching.md)
-- [`<ident>`](./identifiers.md)
+- [`<binary_operator>`](operators.md#binary)
+- [`<unary_operator>`](operators.md#unary)
+- [`<ternary>`](control-flow/ternary.md)
+- [`<fn_call>`](functions.md)
+- [`<match>`](control-flow/pattern-matching.md)
+- [`<ident>`](identifiers.md)
 
 The `<expression>` is defined as an item that returns[^ret] a value.
 

@@ -13,7 +13,7 @@ Branching refers to blocks of code that may be executed based on a defined condi
 Dependencies:
 
 - [`<expr>`](../expressions.md)
-- [`<code_block>`](./code-block.md)
+- [`<code_block>`](code-block.md)
 
 The `<branch>` contains an "if" keyword followed by a parenthesis delimited expression and a code
 block. It may be followed by zero or more conditions under "else" "if" keywords followed by a
