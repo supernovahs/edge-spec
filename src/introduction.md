@@ -1,21 +1,23 @@
 ## Introduction
 
-This document defines __lang__, a domain specific language for the Ethereum Virtual Machine (EVM).
+This document defines Edge, a domain specific language for the Ethereum Virtual Machine (EVM).
 
-__lang__ is a high level, strongly statically typed, multi-paradigm language. It provides:
+Edge is a high level, strongly statically typed, multi-paradigm language. It provides:
 
 - A thin layer of abstraction over the EVM's instruction set architecture (ISA).
 - An extensible polymorphic type system with subtyping.
 - First class support for modules and code reuse.
 - Compile time code execution to fine-tune the compiler's input.
 
-__lang__ is syntactically similar to Rust and Zig, taking advantage of parametric polymorphism and
-compile time code execution with deviations from general purpose languages when reasonable due to
-the unique environment of the EVM.
+Edge's syntax is similar to Rust and Zig where intuitive, however, the language is not designed to
+be a general purpose language with EVM features as an afterthought. Rather, it is designed to extend
+the EVM instruction set with a reasonable type system and syntax sugar over universally understood
+programming constructs.
 
 ### Notation
 
-This specification uses Extended Backus-Naur Form (EBNF) with the following rules.
+This specification uses a grammar similar to Extended Backus-Naur Form (EBNF) with the following
+rules.
 
 - Non-terminal tokens are wrapped in angle brackets `<ident>`.
 - Terminal tokens are wrapped in double quotes `"const"`.
@@ -33,7 +35,6 @@ abbreviated and defined as follows:
 - ["ident"](syntax/identifiers.md): "identifier"
 - ["expr"](syntax/expressions.md): "expression"
 - ["stmt"](syntax/statements.md): "statement"
-- ["fn"](syntax/functions.md): "function"
 
 ### Disambiguation
 
