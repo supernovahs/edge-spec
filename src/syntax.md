@@ -1,14 +1,20 @@
 ## Syntax
 
-Conceptually, all EVM contracts are single-entry point executables and at compile time, __lang__
+Conceptually, all EVM contracts are single-entry point executables and at compile time, Edge
 programs are no different.
 
-Other languages have established a convention of contract-as-an-object, treating contracts as
-stateful objects, optionally with inheritance to separate and modularize interfaces. We support this
-abstraction, but with a clear path to the underlying executable for informational and debugging
-purposes using meta-programming techniques detailed under the
-[compile time code execution](#compile-time-code-execution) section.
+Other languages have used primarily the contract-is-an-object paradigm, mapping fields to storage
+layouts and methods to "external functions" that may read and write the storage. Inheritance enables
+interface constraints, code reuse, and a reasonable model for message passing that relates to the
+EVM external call model.
 
-Treating EVM contracts as single entry point executables aligns the __lang__ program model to the
-general purpose language model where the single 'main' function serves as the entry point which
-handles dispatching internal functions.
+However, this is limited in scope. Conceptually, the contract object paradigm groups stateful data
+and functionality, limiting the deployability to the product type. Extending the deployability to
+arbitrary data types allows for contracts to be functions, type unions, product types, and more.
+While most of these are not particularly useful, this simplifies the type system as well as opens
+the design space to new contract paradigms.
+
+The core syntax of Edge is derived from commonly used patterns in modern programming. Functions,
+branches, and loops are largely intuitive for engineers with experience in C, Rust, Javascript, etc.
+Parametric polymorphism uses syntax similar to Rust and Typescript. Compiler built-in functions and
+"comptime" constructs follow the syntax of Zig.
