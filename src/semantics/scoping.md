@@ -52,13 +52,13 @@ the `Self` namespace.
 type MyStruct<T> = { inner: T };
 type MyError = Overflow | Underflow;
 
-trait TryPlusOne: Add = {
+trait TryPlusOne: Add {
     type Error;
 
     fn tryPlusOne(self: Self) -> Result<Self, Self::Error>;
 }
 
-impl MyStruct<T> = {
+impl MyStruct<T> {
     fn new(inner: T) -> Self {
         return Self { inner: T };
     }
