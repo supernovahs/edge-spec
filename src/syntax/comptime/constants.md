@@ -24,3 +24,7 @@ an expression or a comma separated list of identifiers delimited by parentheses 
 block.
 
 > Note: The expression must be a comptime expression, but the grammar should not constrain this.
+
+### Semantics
+
+> todo

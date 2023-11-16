@@ -30,3 +30,5 @@ instruction to interface with a target conforming to the given ABI.
 
 The optional ampersand separated list of identifiers represents other ABI identifiers to enable ABI
 subtyping.
+
+> todo: revisit this. do traits satisfy this instead?

@@ -13,7 +13,7 @@
     | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" ;
 <alphanumeric_char> ::= <alpha_char> | <dec_char> ;
 
-<unicode_char> ::= ? "i aint writing all that happy for you tho or sorry that happened" ? ;
+<unicode_char> ::= ? "i ain't writing all. that happy for you tho. or sorry that happened" ? ;
 ```
 
 ### Numeric
@@ -52,3 +52,7 @@ Boolean literals may be either "true" or "false".
 ```ebnf
 <literal> ::= <numeric_literal> | <string_literal> | <boolean_literal> ;
 ```
+
+### Semantics
+
+> todo

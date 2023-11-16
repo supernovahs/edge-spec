@@ -44,3 +44,5 @@ abi's constrained functions. The "ext" keyword indicates the function is publicl
 contract's dispatcher. The "mut" keyword indicates the function may mutate the global state in the
 EVM-sense; that is to say "mut" functions require a "call" instruction while those without may use
 "call" or "staticcall" to interface with the contract.
+
+> todo: revisit this. do types satisfy this instead?

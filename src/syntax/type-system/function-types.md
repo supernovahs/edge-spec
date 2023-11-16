@@ -33,3 +33,7 @@ The core `<function_assignment>` is defined as the "fn" keyword followed by its 
 by optional comma separated pairs of identifiers and type signatures, delimited by parenthesis, then
 optionally followed by an arrow and a list of comma separated return types signatures delimited by
 parenthesis, then finally the code block of the function body.
+
+### Semantics
+
+> todo

@@ -19,3 +19,7 @@ Dependencies:
 
 The `<comptime_branch>` is a branch that is evaluated at compile time where only the truthy branch
 is compiled. It is defined as the "comptime" keyword followed by any of the branches.
+
+### Semantics
+
+> todo
