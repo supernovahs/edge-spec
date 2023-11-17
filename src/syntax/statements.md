@@ -1,16 +1,31 @@
 ## Statements
 
-> TODO: rewrite
-
 ```ebnf
 <stmt> ::=
-    | <use_directive>
     | <variable_declaration>
     | <variable_assignment>
-    | <constant_definition>
-    | <branch>
-    | <loop>
-    | <match> ;
+    | <type_declaration>
+    | <type_assignment>
+    | <trait_declaration>
+    | <impl_block>
+    | <function_declaration>
+    | <function_assignment>
+    | <abi_declaration>
+    | <contract_declaration>
+    | <contract_impl_block>
+    | <core_loop>
+    | <for_loop>
+    | <while_loop>
+    | <do_while_loop>
+    | <code_block>
+    | <if_else_if_branch>
+    | <if_match_branch>
+    | <match>
+    | <constant_assignment>
+    | <comptime_branch> 
+    | <comptime_function>
+    | <module_declaration>
+    | <module_import> ;
 ```
 
 Dependencies:

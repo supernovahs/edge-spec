@@ -1,19 +1,25 @@
 ## Expressions
 
-> TODO: rewrite
-
 ```ebnf
 <binary_operation> ::= <expr> <binary_operator> <expr> ;
 <unary_operation> ::= <unary_operator> <expr> ;
 
-<expression> ::= ["("] (
-        <fn_call>
-        | <match>
-        | <binary_operation>
-        | <unary_operation>
-        | <ternary>
-        | <ident>
-    ) [")"] ;
+<expr> ::=
+    | <array_instantiation>
+    | <array_element_access>
+    | <struct_instantiation>
+    | <tuple_instantiation>
+    | <struct_field_access>
+    | <tuple_field_access>
+    | <union_instantiation>
+    | <pattern_match>
+    | <fn_call>
+    | <binary_operation>
+    | <unary_operation>
+    | <ternary>
+    | <literal>
+    | <ident>
+    | ("(" <expr> ")");
 ```
 
 Dependencies:
@@ -29,7 +35,7 @@ The `<expression>` is defined as an item that returns[^ret] a value.
 
 The `<binary_operation>` is an expression composed of two sub-expressions with an infixed binary
 operator. Semantics are beyond the scope of the syntax specification, see
-[operator precedence semantics](../semantics/operator-precedence.md) for more.
+[operator precedence semantics](operators.md) for more.
 
 The `<unary_operation>` is an expression composed of a prefixed unary operator and a sub-expression.
 
