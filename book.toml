@@ -3,7 +3,7 @@ authors = ["jtriley.eth"]
 language = "en"
 multilingual = false
 src = "src"
-title = "language specification"
+title = "Edge Specification"
 
 [output.html]
 default-theme = "ayu"
