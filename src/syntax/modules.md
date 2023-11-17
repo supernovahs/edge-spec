@@ -3,18 +3,7 @@
 ### Declaration
 
 ```ebnf
-<module_declaration> ::=
-    ["pub"] "mod" <ident> "{"
-        [<module_devdoc>]
-        (
-            | <module_declaration>
-            | <type_assignment>
-            | <constant_assignment>
-            | <item_devdoc>
-            | <trait_declaration>
-            | <impl_block>
-        )*
-    "}" ;
+<module_declaration> ::= ["pub"] "mod" <ident> "{" [<module_devdoc>] (<stmt>)* "}" ;
 ```
 
 Dependencies:
