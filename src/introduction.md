@@ -1,3 +1,7 @@
+# The Edge Specification
+
+---
+
 ## All Edge, No Drag.
 
 This document defines Edge, a domain specific language for the Ethereum Virtual Machine (EVM).
