@@ -20,7 +20,7 @@ Dependencies:
 - [`<ident>`](../identifiers.md)
 - [`<type_parameters>`](generics.md#type-parameters)
 - [`<function_assignment>`](function-types.md#assignment)
-- [`<constant_assignment>`](../comptime/constants.md)
+- [`<constant_assignment>`](../comptime/constants.md#assignment)
 - [`<type_assignment>`](assignment.md#assignment)
 
 The `<impl_block>` is the implementation block for a given type. The type identifier is optionally

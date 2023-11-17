@@ -1,6 +1,6 @@
 ## Literals
 
-### Characers
+### Characters
 
 ```ebnf
 <bin_char> ::= "0" | "1" ;

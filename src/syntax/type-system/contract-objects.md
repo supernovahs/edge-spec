@@ -12,6 +12,11 @@ Contract objects serve as an object-like interface to contract constructs.
     "}" ;
 ```
 
+Dependencies:
+
+- [`<ident>`](../identifiers.md)
+- [`<type_signature>`](assignment.md#signature)
+
 The `<contract_field_declaration>` is an identifier and type signature, separated by a colon.
 
 The `<contract_declaration>` is the contract keyword, followed by its identifier, followed by a
@@ -25,6 +30,11 @@ curly brace delimited, comma separated list of field declarations.
         (["ext"] ["mut"] <function_declaration>)*
     "}"
 ```
+
+Dependencies:
+
+- [`<ident>`](../identifiers.md)
+- [`<function_declaration>`](function-types.md#declaration)
 
 The `<contract_impl_block>` is composed of the "impl" keyword, followed by its identifier,
 optionally followed by a colon and abi identifier, followed by list of function declarations,

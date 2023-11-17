@@ -26,12 +26,20 @@ Dependencies:
 
 - [`<binary_operator>`](operators.md#binary)
 - [`<unary_operator>`](operators.md#unary)
-- [`<ternary>`](control-flow/ternary.md)
-- [`<fn_call>`](functions.md)
-- [`<match>`](control-flow/pattern-matching.md)
+- [`<array_instantiation>`](type-system/array-types.md#instantiation)
+- [`<array_element_access>`](type-system/array-types.md#element-access)
+- [`<struct_instantiation>`](type-system/product-types.md#instantiation)
+- [`<tuple_instantiation>`](type-system/product-types.md#instantiation)
+- [`<struct_field_access>`](type-system/product-types.md#field-access)
+- [`<tuple_field_access>`](type-system/product-types.md#field-access)
+- [`<union_instantiation>`](type-system/sum-types.md#instantiation)
+- [`<pattern_match>`](type-system/sum-types.md#pattern-match)
+- [`<function_call>`](system/function-types.md#call)
+- [`<ternary>`](control-flow/branching.md#ternary)
+- [`<literal>`](comptime/literals.md)
 - [`<ident>`](identifiers.md)
 
-The `<expression>` is defined as an item that returns[^ret] a value.
+The `<expr>` is defined as an item that returns[^ret] a value.
 
 The `<binary_operation>` is an expression composed of two sub-expressions with an infixed binary
 operator. Semantics are beyond the scope of the syntax specification, see

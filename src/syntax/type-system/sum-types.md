@@ -28,7 +28,6 @@ Dependencies:
 
 - [`<ident>`](../identifiers.md)
 - [`<expr>`](../expressions.md)
-- [`<type_signature>`](signature.md)
 
 The `<union_instantiation>` instantiates, or creates, the sum type. This consists of the union's
 identifier, followed by the member's identifier, followed by an optional comma separated list of

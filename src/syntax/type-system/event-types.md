@@ -11,6 +11,11 @@ The event type is a custom type to be logged.
     ["anon"] "event" "{" [<event_field_signature> ("," <event_field_signature>)* [","]] "}" ;
 ```
 
+Dependencies:
+
+- [`<ident>`](../identifiers.md)
+- [`<type_signature>`](assignment.md#signature)
+
 The `<event_field_signature>` is an optional "anon" word, followed by "event", followed by either
 a type signature or a type signature delimited by angle brackets and prefixed with "indexed".
 

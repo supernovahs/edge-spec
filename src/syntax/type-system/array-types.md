@@ -8,6 +8,11 @@ The array type is a list of elements of a single type.
 <array_signature> ::= ["packed"] "[" <type_signature> ";" <expr> "]" ;
 ```
 
+Dependencies:
+
+- [`<type_signature>`](assignment.md#signature)
+- [`<expr>`](../expressions.md#expressions)
+
 The `<array_signature>` consists of an optional "packed" keyword prefix to a type signature and
 expression separated by a colon, delimited by brackets.
 
@@ -17,6 +22,11 @@ expression separated by a colon, delimited by brackets.
 <array_instantiation> ::= [<data_location>] "[" <expr> ("," <expr>)* [","] "]" ;
 ```
 
+Dependencies:
+
+- [`<data_location>`](../data-locations.md#data-locations)
+- [`<expr>`](../expressions.md#expressions)
+
 The `<array_instantiation>` is an optional data location annotation followed by a comma separated
 list of expressions delimited by brackets.
 
@@ -25,6 +35,11 @@ list of expressions delimited by brackets.
 ```ebnf
 <array_element_access> ::= <ident> "[" <expr> [":" <expr>] "]" ;
 ```
+
+Dependencies:
+
+- [`<ident>`](../identifiers.md#identifiers)
+- [`<expr>`](../expressions.md#expressions)
 
 The `<array_element_access>` is the array's identifier followed a bracket-delimited expression and
 optionally a second expression, colon separated.

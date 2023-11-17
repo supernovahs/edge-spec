@@ -16,6 +16,7 @@ as a subtyping construct for contract objects.
 
 Dependencies:
 
+- [`<ident>`](../identifiers.md)
 - [`<function_declaration>`](function-types.md#declaration)
 
 The `<abi_declaration>` is prefixed with "abi", followed by its identifier, then an optional colon

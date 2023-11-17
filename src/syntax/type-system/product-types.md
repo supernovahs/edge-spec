@@ -16,7 +16,7 @@ The product type is a compound type composed of none or more internal types.
 
 Dependencies:
 
-- [`<ident>`](../identifiers.md)
+- [`<ident>`](../identifiers.md#identifiers)
 - [`<type_parameters>`](generics.md#type-parameters)
 - [`<type_signature>`](assignment.md#signature)
 
@@ -35,9 +35,9 @@ Dependencies:
 
 Dependencies:
 
-- [`<ident>`](../identifiers.md)
-- [`<expr>`](../expressions.md)
-- [`<data_location>`](../data-locations.md)
+- [`<ident>`](../identifiers.md#identifiers)
+- [`<expr>`](../expressions.md#expressions)
+- [`<data_location>`](../data-locations.md#data-locations)
 
 The `<struct_instantiation>` is an instantiation, or creation, of a struct. It may optionally
 include a data location annotation, however the semantic rules for this are in the
@@ -54,12 +54,13 @@ by a comma separated list of expressions delimited by parenthesis.
 
 ```ebnf
 <struct_field_access> ::= <ident> "." <ident> ;
-<tuple_field_access> ::= <ident> "." <dec> ;
+<tuple_field_access> ::= <ident> "." <dec_char> ;
 ```
 
 Dependencies:
 
 - [`<ident>`](../identifiers.md)
+- [`<dec_char>`](../comptime/literals.md#characters)
 
 The `<struct_field_access>` is written as the struct's identifier followed by the field's identifier
 separated by a period.

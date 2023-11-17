@@ -23,7 +23,6 @@ Dependencies:
 
 - [`<ident>`](../identifiers.md)
 - [`<type_parameters>`](generics.md#type-parameters)
-- [`<trait_constraints>`](#constraints)
 - [`<type_declaration`](assignment.md#declaration)
 - [`<type_assignment>`](assignment.md#assignment)
 - [`<constant_declaration>`](../comptime/constants.md#declaration)

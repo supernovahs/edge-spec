@@ -15,6 +15,7 @@
 
 Dependencies:
 
+- [`<array_signature>`](array-types.md#signature)
 - [`<struct_signature>`](product-types.md#signature)
 - [`<tuple_signature>`](product-types.md#signature)
 - [`<union_signature>`](sum-types.md#signature)

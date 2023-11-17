@@ -8,6 +8,10 @@ The function type is a type composed of input and output types.
 <function_signature> ::= <type_signature> "->" <type_signature> ;
 ```
 
+Dependencies:
+
+- [`<type_signature>`](assignment.md#signature)
+
 The `<function_signature>` consists of an input type signature and an output type signature,
 separated by an arrow.
 
@@ -23,16 +27,39 @@ separated by an arrow.
     ")" ["->" "(" <type_signature> ("," <type_signature>)* [","] ")"] ;
 ```
 
+Dependencies:
+
+- [`<ident>`](../identifiers.md)
+- [`<type_signature>`](assignment.md#signature)
+
 ### Assignment
 
 ```ebnf
 <function_assignment> ::= <function_declaration> <code_block> ;
 ```
 
-The core `<function_assignment>` is defined as the "fn" keyword followed by its identifier, followed
+Dependencies:
+
+- [`<code_block>`](../control-flow/code-block.md#declaration)
+
+The `<function_assignment>` is defined as the "fn" keyword followed by its identifier, followed
 by optional comma separated pairs of identifiers and type signatures, delimited by parenthesis, then
 optionally followed by an arrow and a list of comma separated return types signatures delimited by
 parenthesis, then finally the code block of the function body.
+
+### Call
+
+```ebnf
+<function_call> ::= <ident> "(" [<expr> ("," <expr>) [","]] ")" ;
+```
+
+Dependencies:
+
+- [`<ident>`](../identifiers.md)
+- [`<expr>`](../expressions.md)
+
+The `<function_call>` is an identifier followed by a comma separated list of expressions delimited
+by parenthesis.
 
 ### Semantics
 
