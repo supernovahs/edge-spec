@@ -5,7 +5,7 @@ Contract objects serve as an object-like interface to contract constructs.
 ### Declaration
 
 ```ebnf
-<contract_field_declaration> ::= <ident> ":" <type_signature>
+<contract_field_declaration> ::= <ident> ":" <type_signature> ;
 <contract_declaration> ::=
     "contract" <ident> "{"
         [<contract_field_declaration> ("," <contract_field_declaration>)* [","]]
