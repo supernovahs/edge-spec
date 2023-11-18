@@ -38,3 +38,4 @@
   - [Namespaces](semantics/namespaces.md)
   - [Scoping](semantics/scoping.md)
   - [Visibility](semantics/visibility.md)
+- [Inline Assembly](inline-assembly.md)
