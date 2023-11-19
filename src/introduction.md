@@ -29,7 +29,7 @@ rules.
 - Sequences of zero or more items are wrapped in parenthesis and suffixed with a star `("," <ident>)*`.
 - Sequences of one or more items are wrapped in parenthesis and suffixed with a plus `(<ident>)+`.
 
-In contrast to ENBF, we define a rule that all items are non-atomic, that is to say arbitrary
+In contrast to EBNF, we define a rule that all items are non-atomic, that is to say arbitrary
 whitespace characters `\n`, `\t`, and `\r` may surround all tokens unless wrapped with curly braces
 `{ "0x" (<hex_digit>)* }`.
 
