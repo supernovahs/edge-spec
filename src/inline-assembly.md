@@ -24,7 +24,7 @@ yes, @real_philogy, there will be inline assembly
 
 Dependencies:
 
-- [`<numeric_literal>`](syntax/comptime/literals.md#numeric)
+- [`<hex_literal>`](syntax/comptime/literals.md#numeric)
 - [`<ident>`](syntax/identifiers.md)
 
 The `<opcode>` is one of the mnemonic EVM instructions, or a numeric literal, or an identifier.
