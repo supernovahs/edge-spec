@@ -39,3 +39,4 @@
   - [Scoping](semantics/scoping.md)
   - [Visibility](semantics/visibility.md)
 - [Inline Assembly](inline-assembly.md)
+- [Built-In](built-in.md)
