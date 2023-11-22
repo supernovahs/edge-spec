@@ -19,7 +19,7 @@ yes, @real_philogy, there will be inline assembly
     | "swap6" | "swap7" | "swap8" | "swap9" | "swap10" | "swap11" | "swap12" | "swap13" | "swap14"
     | "swap15" | "swap16" | "log0" | "log1" | "log2" | "log3" | "log4" | "create" | "call"
     | "callcode" | "return" | "delegatecall" | "create2" | "staticcall" | "revert" | "invalid"
-    | "selfdestruct" | <hex_literal> | <ident> ;
+    | "selfdestruct" | <numeric_literal> | <ident> ;
 ```
 
 Dependencies:
