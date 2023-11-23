@@ -13,7 +13,8 @@
     | <tuple_field_access>
     | <union_instantiation>
     | <pattern_match>
-    | <fn_call>
+    | <arrow_function>
+    | <function_call>
     | <binary_operation>
     | <unary_operation>
     | <ternary>
@@ -34,7 +35,8 @@ Dependencies:
 - [`<tuple_field_access>`](type-system/product-types.md#field-access)
 - [`<union_instantiation>`](type-system/sum-types.md#instantiation)
 - [`<pattern_match>`](type-system/sum-types.md#pattern-match)
-- [`<function_call>`](system/function-types.md#call)
+- [`<arrow_function>`](type-system/function-types.md#arrow-functions)
+- [`<function_call>`](type-system/function-types.md#call)
 - [`<ternary>`](control-flow/branching.md#ternary)
 - [`<literal>`](comptime/literals.md)
 - [`<ident>`](identifiers.md)

@@ -47,6 +47,20 @@ by optional comma separated pairs of identifiers and type signatures, delimited 
 optionally followed by an arrow and a list of comma separated return types signatures delimited by
 parenthesis, then finally the code block of the function body.
 
+#### Arrow Functions
+
+```ebnf
+<arrow_function> ::= (<ident> | ("(" <ident> ("," <ident>)* [","] ")")) "=>" <code_block> ;
+```
+
+Dependencies:
+
+- [`<ident>`](../identifiers.md)
+- [`<code_block>`](../control-flow/code-block.md)
+
+The `<arrow_function>` is defined as either a single identifier or a comma separated,
+parenthesis delimited list of identifiers, followed by the "=>" bigram, followed by a code block.
+
 ### Call
 
 ```ebnf
