@@ -13,4 +13,22 @@ The `<comptime_function>` is a function that is evaluated at compile time. It is
 
 ### Semantics
 
-> todo
+Since `comptime` must be resolved at compile time, the function must contain only expressions
+resolvable at compile time.
+
+```rs
+comptime fn a() -> u8 {
+    1
+}
+
+comptime fn b(arg: u8) -> u8 {
+    arg * 2
+}
+
+comptime fn c(arg: u8) -> u8 {
+    a(b(arg))
+}
+
+const A = c(1);
+const B = c(A);
+```
