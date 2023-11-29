@@ -49,6 +49,29 @@ type TypeInfo =
     | Function(FunctionType);
 ```
 
+#### `HardFork`
+
+```rs
+type HardFork =
+    | Frontier
+    | Homestead
+    | Dao
+    | Tangerine
+    | SpuriousDragon
+    | Byzantium
+    | Constantinople
+    | Petersburg
+    | Istanbul
+    | MuirGlacier
+    | Berlin
+    | London
+    | ArrowGlacier
+    | GrayGlacier
+    | Paris
+    | Shanghai
+    | Cancun;
+```
+
 ### Functions
 
 #### `@typeInfo`
@@ -88,3 +111,20 @@ of type signatures of length `N` where `N` is the number of fields in the struct
 
 The `compilerError` function takes a single string as an argument and throws an error at compile
 time with the provided message.
+
+#### `@hardFork`
+
+```rs
+@hardFork() -> HardFork;
+```
+
+The `hardFork` function returns an enumeration of the built in [`HardFork`](#hardfork) type. This is
+derived from the compiler configuration.
+
+#### `@bytecode`
+
+```rs
+@bytecode(T -> U) -> Bytes;
+```
+
+The `bytecode` function takes an arbitrary function and returns its bytecode in `Bytes`.
