@@ -42,4 +42,20 @@ module import items.
 
 ### Semantics
 
-> todo
+Namespace semantics in modules are defined in the [namespace document](../semantics/namespaces.md).
+
+Visibility semantics in modules are defined in the
+[visibility document](../semantics/visibility.md).
+
+Modules can contain developer documentation, declarations, and assignments. If the module contains
+developer documentation, it must be the first item in the module. This is for readability.
+
+Files are implicitly modules with a name equivalent to the file name.
+
+> todo: should this sanitize file names or require filenames to contain only valid ident chars?
+
+Type, function, abi, and contract declarations must be assigned in the same module. However, trait
+are declared without assignment and submodules may be declared without a block only if there is a
+file with a matching name.
+
+The `super` identifier represents the direct parent module of teh module in which it's invoked.
