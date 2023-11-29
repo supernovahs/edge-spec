@@ -22,7 +22,7 @@
     | <if_match_branch>
     | <match>
     | <constant_assignment>
-    | <comptime_branch> 
+    | <comptime_branch>
     | <comptime_function>
     | <module_declaration>
     | <module_import> ;
