@@ -6,14 +6,14 @@
 <bin_char> ::= "0" | "1" ;
 <dec_char> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
 <hex_char> ::=
-    | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7"
-    | "8" | "9" | "a" | "b" | "c" | "d" | "e" | "f" ;
+    | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "a"
+    | "b" | "c" | "d" | "e" | "f" | "A" | "B" | "C" | "D" | "E" | "F";
 <alpha_char> ::=
     | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p"
     | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" ;
 <alphanumeric_char> ::= <alpha_char> | <dec_char> ;
 
-<unicode_char> ::= ? "i ain't writing all. that happy for you tho. or sorry that happened" ? ;
+<unicode_char> ::= ? "i ain't writing all that. happy for you tho. or sorry that happened" ? ;
 ```
 
 ### Numeric
@@ -55,4 +55,21 @@ Boolean literals may be either "true" or "false".
 
 ### Semantics
 
-> todo
+Numeric literals may contain arbitrary underscores in the same literal. Numeric literals may also be
+suffixed with the numeric type to constrain its type. If there is no type suffix, the type is
+inferred by the context. If a type cannot be inferred, it will default to a `u256`.
+
+Both numeric and boolean literals are roughly translated to pushing the value onto the stack.
+
+String literals represent string instantiation. String instantiation behaves as a packed `u8`
+[array instantiation](../type-system/array-types.md#instantiation).
+
+```rs
+const A = 1;
+const B = 1u8;
+const C = 0b11001100;
+const D = 0xffFFff;
+const E = true;
+const F = "asdf";
+const G = "💩";
+```
