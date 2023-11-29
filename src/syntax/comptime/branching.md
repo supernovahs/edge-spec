@@ -22,4 +22,47 @@ is compiled. It is defined as the "comptime" keyword followed by any of the bran
 
 ### Semantics
 
-> todo
+Since `comptime` must be resolved at compile time, the branching expression must be resolvable at
+compile time and of type `bool`. That is to say the expression must itself be a literal, constant,
+or another expression resolvable at compile time.
+
+In the case of compile time branching, branches that are not matched will be removed from the code
+at compile time.
+
+```rs
+use std::{
+    builtin::HardFork,
+    op::{tstore, tload, sstore, sload},
+};
+
+const LOCK_SLOT: u256 = keccak256("mutex").into() - 1;
+
+enum Lock {
+    Locked,
+    Unlocked,
+}
+
+fn reader() -> (u256 -> u256) {
+    match @hardFork() {
+        HardFork::Cancun => tload,
+        _ => sload,
+    }
+}
+
+fn writer() -> ((u256, u256) -> ()) {
+    match @hardFork() {
+        HardFork::Cancun => tstore,
+        _ => sstore,
+    }
+}
+
+fn nonreentrant(action: T -> U) {
+    if reader()(LOCK_SLOT) matches Lock::Locked {
+        revert();
+    }
+    writer()(LOCK_SLOT, Lock::Locked);
+    let res = action();
+    writer()(LOCK_SLOT, Lock::Unlocked);
+    return res;
+}
+```
