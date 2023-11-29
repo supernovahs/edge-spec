@@ -32,4 +32,25 @@ block.
 
 ### Semantics
 
-> todo
+Constants must be resolvable at compile time either by assigning it a literal, another constant, or
+an expression that can be resolved at compile time.
+
+The type of a constant will only be inferred if its assignment is a literal with a type annotation,
+another constant with a resolved type, or an expression with a resolved type such as a function
+call.
+
+```rs
+const A: u8 = 1;
+const B = 1u8;
+const C = B;
+const D = a();
+const E: u8 = b();
+
+comptime fn a() -> u8 {
+    1
+}
+
+fn b() -> T {
+    2
+}
+```
