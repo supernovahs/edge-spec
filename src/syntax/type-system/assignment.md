@@ -29,7 +29,7 @@ function signature as well as an identifier followed by optional type parameters
 ### Declaration
 
 ```ebnf
-<type_declaration> ::= "type" <ident> [<type_parameters>] 
+<type_declaration> ::= ["pub"] "type" <ident> [<type_parameters>] 
 ```
 
 Dependencies:
