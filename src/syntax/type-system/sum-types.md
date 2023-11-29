@@ -38,7 +38,7 @@ Behavior of instantiation is defined in the [data location rule](../../semantics
 ### Union Pattern
 
 ```ebnf
-<union_pattern> ::= <ident> "::" <ident> ;
+<union_pattern> ::= <ident> "::" <ident> ["(" <ident> ("," <ident>)* [","] ")"];
 ```
 
 Dependencies:
