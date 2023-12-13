@@ -1,7 +1,5 @@
 ## Inline Assembly
 
-yes, @real_philogy, there will be inline assembly
-
 ### Opcodes
 
 ```ebnf
